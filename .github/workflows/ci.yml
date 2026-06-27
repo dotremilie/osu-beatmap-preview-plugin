@@ -14,38 +14,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout plugin
+      - name: Checkout
         uses: actions/checkout@v6
-        with:
-          path: plugin
-
-      - name: Checkout library
-        uses: actions/checkout@v6
-        with:
-          repository: dotremilie/osu-beatmap-preview
-          path: osu-beatmap-preview
 
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: plugin/package-lock.json
-
-      - name: Build library
-        working-directory: osu-beatmap-preview
-        run: |
-          npm ci
-          npm run build
 
       - name: Install plugin dependencies
-        working-directory: plugin
         run: npm ci
 
       - name: Audit plugin dependencies
-        working-directory: plugin
         run: npm audit
 
       - name: Build plugin
-        working-directory: plugin
         run: npm run build
