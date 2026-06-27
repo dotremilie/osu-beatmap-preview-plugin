@@ -4,6 +4,8 @@ Cross-browser Manifest V3 extension popup for previewing osu! beatmaps.
 
 The plugin consumes [`osu-beatmap-preview`](https://github.com/dotremilie/osu-beatmap-preview) for canvas rendering and owns browser-extension concerns such as active-tab detection, `.osu` fetching, playback controls, mod selection, and popup UI.
 
+<img width="638" height="558" alt="osu-beatmap-preview-plugin" src="https://github.com/user-attachments/assets/44d974d8-a299-4dfe-a937-5f46b9e54dc0" />
+
 ## Development
 
 Install and run the plugin:
