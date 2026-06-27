@@ -1,0 +1,19 @@
+{
+  "name": "osu! Beatmap Preview",
+  "short_name": "osu! preview",
+  "description": "An extension to preview osu! beatmaps directly in your browser.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://osu.ppy.sh/*",
+    "https://new.ppy.sh/*",
+    "https://assets.ppy.sh/*"
+  ]
+}
